@@ -1,0 +1,18 @@
+const backStack = new Stack;
+const forwardStack = new Stack;
+
+when user browses to new site:
+	backStack.push(new site)
+	clear forwardStack
+
+when user clicks 'back' button:
+	if backStack not empty:
+		forwardStack.push(current site)
+		lastSite = backStack.pop()
+		go to lastSite
+
+when user clicks 'forward' button:
+	if forwardStack not empty:
+		backStack.push(current site)
+		nextSite = forwardStack.pop()
+		go to nextSite
